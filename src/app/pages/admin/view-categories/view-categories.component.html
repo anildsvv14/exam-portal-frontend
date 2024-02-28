@@ -1,0 +1,34 @@
+      <mat-card>
+        <mat-list>
+            <mat-card-header><h4>All Categories</h4></mat-card-header>
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Titile</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Description</th>
+                   <th scope="col" colspan="3">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let c of categories">
+                    <td scope="col" scope="row">{{c.cid}}</td>
+                    <td scope="col">{{c.title}}</td>
+                    <td scope="col">{{c.description}}</td>
+                    <td scope="col">{{c.description}}</td>
+                    <td scope="col" colspan="3">
+                      <button mat-raised-button color="primary" routerLink="">Edit</button>
+                      <button mat-raised-button color="accent">Show</button>
+                      <button mat-raised-button color="warn">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <button mat-raised-button color="accent" class="ml20" routerLink="/admin/add-category">Add New Category</button>
+            
+        </mat-list>
+    </mat-card>
+ 
+
